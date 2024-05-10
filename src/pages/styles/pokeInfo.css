@@ -1,0 +1,500 @@
+.pokeInfo__conteiner{
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    gap: 17px;
+    border: 20px solid #eee;
+    padding-bottom: 20px;
+}
+.pokeInfo__back{
+    background-color: black;
+    position: absolute;
+    width: 100%;
+    height: 300px;
+}
+
+.pokeInfo__img{
+    z-index: 10;
+}
+.pokeinfo__num{
+    border: 1px solid;
+    padding: 5px;
+    box-shadow: 0px 5px 5px rgb(76, 76, 76) ;
+}
+.pokeInfo__cualidad{
+    display: flex;
+    gap: 30px;
+    margin: 30px;
+}
+
+.pokeInfo__tipoyskill{
+    display: flex;
+    gap: 30px;
+}
+.pokeInfo__tipo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.pokeInfo__tipo ul{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pokeInfo__skill{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.pokeInfo__skill ul{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pokeInfo__bar{
+    background-color: white;
+    height: 30px;
+    width: 100%;
+}
+.babar--progres{
+    background-color: orange;
+    width: 30%;
+    height: 100%;
+}
+
+.pokeInfo__stats ul{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+.pokeInfo__movientos{
+    padding-bottom: 15px;
+}
+.pokeInfo__movientos ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;
+    gap: 10px;
+}
+
+.pokeInfo__movientos ul li{
+    padding: 10px 10px;
+    border-radius: 9px;
+    background-color: rgb(74, 74, 74);
+}
+/* Colores */
+
+.pokeInfo__back--normal {
+    background-color: pink;
+}
+
+.pokeInfo__back--fighting {
+    background-color: orangered;
+}
+
+.pokeInfo__back--flying {
+    background-color: white;
+}
+
+.pokeInfo__back--poison {
+    background-color: violet;
+}
+
+.pokeInfo__back--ground {
+    background-color: brown;
+}
+
+.pokeInfo__back--rock {
+    background-color: slategray;
+}
+
+.pokeInfo__back--bug {
+    background-color: lightgreen;
+}
+
+.pokeInfo__back--ghost {
+    background-color: rebeccapurple;
+}
+
+.pokeInfo__back--steel {
+    background-color: steelblue;
+}
+
+.pokeInfo__back--fire {
+    background-color: red;
+}
+
+.pokeInfo__back--water {
+    background-color: dodgerblue;
+}
+
+.pokeInfo__back--grass {
+    background-color: green;
+}
+
+.pokeInfo__back--electric {
+    background-color: yellow;
+}
+
+.pokeInfo__back--psychic {
+    background-color: darkmagenta;
+}
+
+.pokeInfo__back--ice {
+    background-color: aqua;
+}
+
+.pokeInfo__back--dragon {
+    background-color: lemonchiffon;
+}
+
+.pokeInfo__back--dark {
+    background-color: black;
+}
+
+.pokeInfo__back--fairy {
+    background-color: salmon;
+}
+
+
+/* Colores del borde */
+.pokeInfo--normal {
+    border-color: pink;
+}
+
+.pokeInfo--fighting {
+    border-color: orangered;
+}
+
+.pokeInfo--flying {
+    border-color: white;
+}
+
+.pokeInfo--poison {
+    border-color: violet;
+}
+
+.pokeInfo--ground {
+    border-color: brown;
+}
+
+.pokeInfo--rock {
+    border-color: slategray;
+}
+
+.pokeInfo--bug {
+    border-color: lightgreen;
+}
+
+.pokeInfo--ghost {
+    border-color: rebeccapurple;
+}
+
+.pokeInfo--steel {
+    border-color: steelblue;
+}
+
+.pokeInfo--fire {
+    border-color: red;
+}
+
+.pokeInfo--water {
+    border-color: dodgerblue;
+}
+
+.pokeInfo--grass {
+    border-color: green;
+}
+
+.pokeInfo--electric {
+    border-color: yellow;
+}
+
+.pokeInfo--psychic {
+    border-color: darkmagenta;
+}
+
+.pokeInfo--ice {
+    border-color: aqua;
+}
+
+.pokeInfo--dragon {
+    border-color: lemonchiffon;
+}
+
+.pokeInfo--dark {
+    border-color: black;
+}
+
+.pokeInfo--fairy {
+    border-color: salmon;
+}
+
+/* Colores del tipo de elemento del primer elemento o hijo*/
+
+.tipo__color--normal:first-child{
+    background-color: pink;
+    padding: 10px 20px;
+    color: black;
+    border-radius: 10px;
+
+}
+
+.tipo__color--fighting:first-child{
+    background-color: orangered;
+    padding: 10px 20px;
+    border-radius: 10px;
+
+}
+
+.tipo__color--flying:first-child{
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 10px;
+
+}
+
+.tipo__color--poison:first-child {
+    background-color: violet;
+    border-radius: 10px;
+    padding: 10px 20px;
+
+}
+
+.tipo__color--ground:first-child {
+    background-color: brown;
+    padding: 10px 20px;
+    border-radius: 10px;
+
+}
+
+.tipo__color--rock:first-child {
+    background-color: slategray;
+    padding: 10px 20px;
+    border-radius: 10px;
+
+}
+
+.tipo__color--bug:first-child {
+    background-color: lightgreen;
+    padding: 10px 20px;
+    border-radius: 10px;
+
+}
+
+.tipo__color--ghost:first-child {
+    background-color: rebeccapurple;
+    padding: 10px 20px;
+    border-radius: 10px;
+
+}
+
+.tipo__color--steel:first-child {
+    background-color: steelblue;
+    padding: 10px 20px;
+    border-radius: 10px;
+
+}
+
+.tipo__color--fire:first-child {
+    background-color: red;
+    padding: 10px 20px;
+    border-radius: 10px;
+
+}
+
+.tipo__color--water:first-child {
+    background-color: dodgerblue;
+    padding: 10px 20px;
+    border-radius: 10px;
+
+}
+
+.tipo__color--grass:first-child {
+    background-color: green;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+.tipo__color--electric:first-child {
+    background-color: yellow;
+    padding: 10px 20px;
+    color: black;
+    border-radius: 10px;
+
+}
+
+.tipo__color--psychic:first-child {
+    background-color: darkmagenta;
+    padding: 10px 20px;
+    border-radius: 10px;
+
+}
+
+.tipo__color--ice:first-child {
+    background-color: aqua;
+    padding: 10px 20px;
+    border-radius: 10px;
+
+}
+
+.tipo__color--dragon:first-child {
+    background-color: lemonchiffon;
+    padding: 10px 20px;
+    color: black;
+    border-radius: 10px;
+
+}
+
+.tipo__color--dark:first-child {
+    background-color: black;
+    padding: 10px 20px;
+    border-radius: 10px;
+
+}
+
+.tipo__color--fairy:first-child {
+    background-color: salmon;
+    padding: 10px 20px;
+    border-radius: 10px;
+
+}
+
+/* colores de elemento del ultimo elemento o hijo */
+
+.tipo__color--normal{
+    background-color: pink;
+    padding: 10px 20px;
+    color: black;
+    border-radius: 10px;
+
+}
+
+.tipo__color--fighting{
+    background-color: orangered;
+    padding: 10px 20px;
+    border-radius: 10px;
+
+}
+
+.tipo__color--flying{
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 10px;
+
+}
+
+.tipo__color--poison{
+    background-color: violet;
+    border-radius: 10px;
+    padding: 10px 20px;
+
+}
+
+.tipo__color--ground{
+    background-color: brown;
+    padding: 10px 20px;
+    border-radius: 10px;
+
+}
+
+.tipo__color--rock{
+    background-color: slategray;
+    padding: 10px 20px;
+    border-radius: 10px;
+
+}
+
+.tipo__color--bug{
+    background-color: lightgreen;
+    padding: 10px 20px;
+    border-radius: 10px;
+
+}
+
+.tipo__color--ghost{
+    background-color: rebeccapurple;
+    padding: 10px 20px;
+    border-radius: 10px;
+
+}
+
+.tipo__color--steel{
+    background-color: steelblue;
+    padding: 10px 20px;
+    border-radius: 10px;
+
+}
+
+.tipo__color--fire{
+    background-color: red;
+    padding: 10px 20px;
+    border-radius: 10px;
+
+}
+
+.tipo__color--water{
+    background-color: dodgerblue;
+    padding: 10px 20px;
+    border-radius: 10px;
+
+}
+
+.tipo__color--grass{
+    background-color: green;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+.tipo__color--electric{
+    background-color: yellow;
+    padding: 10px 20px;
+    color: black;
+    border-radius: 10px;
+
+}
+
+.tipo__color--psychic{
+    background-color: darkmagenta;
+    padding: 10px 20px;
+    border-radius: 10px;
+
+}
+
+.tipo__color--ice{
+    background-color: aqua;
+    padding: 10px 20px;
+    border-radius: 10px;
+
+}
+
+.tipo__color--dragon{
+    background-color: lemonchiffon;
+    padding: 10px 20px;
+    color: black;
+    border-radius: 10px;
+
+}
+
+.tipo__color--dark{
+    background-color: black;
+    padding: 10px 20px;
+    border-radius: 10px;
+
+}
+
+.tipo__color--fairy{
+    background-color: salmon;
+    padding: 10px 20px;
+    border-radius: 10px;
+
+}

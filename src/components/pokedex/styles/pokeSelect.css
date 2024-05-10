@@ -1,0 +1,7 @@
+select{
+    border: none;
+    border-radius: 7px;
+}
+option{
+    font-weight: bold;
+}

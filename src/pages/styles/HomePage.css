@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
+.homePage__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(https://c4.wallpaperflare.com/wallpaper/927/247/737/pokemon-nature-pikachu-charmander-wallpaper-preview.jpg);
+    background-size: cover;
+    height: 100vh;
+    font-family: 'Pixelify Sans';
+    font-size: 26px;
+    color: #a5e5d8
+}
+.homePage__img{
+    width: 550px;
+    display: inline-block;
+    max-width: 100%;
+    object-fit: contain;
+}
+.homePage__decorar{
+ padding-bottom: 50px;
+}
+.homePage__form{
+    display: flex;
+}
+.homePage__input{
+    height: 35px;
+    border-radius: 7px 0 0 7px;
+    border: none;
+}
+.homePage__button{
+    height: 35px;
+    background-color:#ff7350;
+    border:none;
+    border-radius: 0 7px 7px 0;
+    padding: 0 15px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
