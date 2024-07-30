@@ -4,12 +4,15 @@ import './styles/pokedex.css'
 import useFectch from '../hooks/useFectch'
 import PokeCard from '../components/pokedex/PokeCard'
 import PokeSelect from '../components/pokedex/PokeSelect'
+import Pagination from '../components/pokedex/Pagination'
 
 const Pokedex = () => {
 
   const [selectValue, setSelectValue] = useState('')
   const [inputValue, setInputValue] = useState('')
   const [pokemons, getPokemons, getType] = useFectch()
+  const [currentPage, setCurrentPage] = useState(1)
+  const cardsPerPage = 12
 
   const trainer = useSelector(store => store.trainer)
 
@@ -30,23 +33,32 @@ const Pokedex = () => {
     textInput.current.value = '';
   }
 
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber)
+  }
+
   //console.log(pokemons);
 
-  const pokeSearch = (poke) => {
+  const pokeFilter = (poke) => {
     const perName = poke.name.includes(inputValue)
     return perName
   }
 
+  const indexOfLastCard = currentPage * cardsPerPage
+  const indexOfFirstCard = indexOfLastCard - cardsPerPage
+  const currentCards = pokemons?.results?.filter(pokeFilter).slice(indexOfFirstCard, indexOfLastCard)
+
+
   //Hay que hacer la paginacion, se cambia pagination, por el contenido dinamico que hay ants del map() O sea, del div, pokedex_container
-  const pagination = () => {
-    pokemons?.results.filter(pokeSearch).slice()
-    return 
-  }
+  // const pagination = () => {
+  //   pokemons?.results.filter(pokeSearch).slice()
+  //   return 
+  // }
 
   return (
     <>
       <header>
-        <img src="..\assets\logo de pokedex.png" alt="" />
+        <img src="..\assets\logo de pokedex.png"/>
       </header>
       <section className='pokedex'>
         <div className='pokedex__decoration'>
@@ -61,9 +73,17 @@ const Pokedex = () => {
             />
           </div>
         </div>
+        
+        <Pagination
+                  cardsPerPage={cardsPerPage}
+                  totalCards={pokemons?.results?.filter(pokeFilter).length}
+                  currentPage={currentPage}
+                  onPageChange={handlePageChange}
+        />
+
         <div className='pokedex_container'>
           {
-            pokemons?.results.filter(pokeSearch).map((poke) => (
+            currentCards?.map((poke) => (
               <PokeCard
                 key={poke.url}
                 url={poke.url}
@@ -71,6 +91,14 @@ const Pokedex = () => {
             ))
           }
         </div>
+
+        <Pagination
+                  cardsPerPage={cardsPerPage}
+                  totalCards={pokemons?.results?.filter(pokeFilter).length}
+                  currentPage={currentPage}
+                  onPageChange={handlePageChange}
+        />
+
       </section>
     </>
   )

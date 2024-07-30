@@ -27,7 +27,7 @@ const PokeCard = ({ url }) => {
                     <img src={pokemon?.sprites.other['official-artwork'].front_default} alt="" />
                </figure>
           
-          <h3 className={`pokecard_name--${pokemon?.types[0].type.name}`}>{pokemon?.name.charAt(0).toUpperCase() + pokemon?.name.slice(1)}</h3>
+          <h3 className={`pokecard_name--${pokemon?.types[0].type.name}`}>{pokemon?.name.charAt(0).toUpperCase() + pokemon?.name.slice(1)  || ''}</h3>
                 <span>Tipo</span>
            <ul className='pokecard_types'>
                {
